@@ -22,7 +22,7 @@ usada para analisar ou prever quando um evento provavelmente acontecerá. Origin
 
 ## Censura
 
-Em análise de sobrevivência a variável resposta é, geralmente, o tempo até a ocorrência de um evento de interesse. Esse tempo é denominado **tempo de falha**. A principal característica dos dados de sobrevivência é a presença de **censura**, que é a observação parcial da resposta. $X_i$
+Em análise de sobrevivência a variável resposta é, geralmente, o tempo até a ocorrência de um evento de interesse. Esse tempo é denominado **tempo de falha**. A principal característica dos dados de sobrevivência é a presença de **censura**, que é a observação parcial da resposta. 
 
 *Por que os modelos de regressão não podem ser usados?*
 
@@ -36,7 +36,7 @@ Caracterizamos os dados da análise de sobrevivência com 3 elementos: $(X_i, E_
  
 \- $E_i$ é o indicador de evento tal que $E_i=1$, se um evento acontecer e $Ei=0$ em caso de censura
 
-\- $T_i=min(t_i,c_i)$ é o tempo observado, com $t_i$ o tempo real do evento e $c_i$ o tempo de censura.
+\- $T_i = min(t_i,c_i)$ é o tempo observado, com $t_i$ o tempo real do evento e $c_i$ o tempo de censura.
 
 Isso significa que para ajustar um determinado modelo, você precisará fornecer esses 3 elementos.
 
@@ -47,3 +47,12 @@ mtlr.fit(X=X_train, T=T_train, E=E_train)
 ```
 
 ## A matemática da Análise de Sobrevivência
+
+\- $T$**, Tempo de Sobrevivência**  
+
+$T$ é uma variável aleatória positiva que representa o tempo de espera até que um evento ocorra. Sua função de densidade de probabilidade (p.d.f.) é $f(t)$ e a função de distribuição cumulativa (c.d.f.) é dada por
+
+
+\- $S(t,x)$**, Função de Sobrevivência**  
+
+\- $h(t,x)$**, Função de Risco e** $r(x)$ **pontuação de risco**
