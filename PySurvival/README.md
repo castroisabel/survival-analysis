@@ -65,3 +65,9 @@ $$S(t) \ =\ P\[T\geq t\] \ =\ 1 - F(t)$$
 $h(t)$ expressa a probabilidade condicional de que o evento ocorra dentro de $\[t,t+dt)$ , dado que não ocorreu antes.
 
 $$h(t) \=\ \lim_{dt \rightarrow 0} \frac{P\[t \leq T < t + dt \ |\ T \geq t \]}{dt} \ =\ \frac{f(t)}{S(t)} = -\frac{d}{dt}\log \ S(t)$$
+
+Assim, as funções de risco e sobrevivência estão ligadas pela seguinte fórmula:
+
+$$ S(t)\ =\ \exp \left( -\int_{0}^th(u)du \right)$$
+
+onde $H(t) \=\ \int_{0}^th(u)du$ é a função de risco acumulada.
