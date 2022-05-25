@@ -56,6 +56,8 @@ $$F(t) \ =\ P[T < t] \ = \int_{-\infty}^tf(u)du$$
 
 \-> $S(t,x)$**, Função de Sobrevivência**  
 
+$S(t)$ é a probabilidade de que o evento de interesse não tenha ocorrido até um certo tempo t
+
 $$S(t) \ =\ P[T\geq t] \ =\ 1 - F(t)$$
 
 \-> $h(t,x)$**, Função de Risco e** $r(x)$ **pontuação de risco**
