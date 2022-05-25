@@ -34,9 +34,9 @@ Caracterizamos os dados da análise de sobrevivência com 3 elementos: $(X_i, E_
 
 \-> $X_i$ é um vetor de features p-dimensional
  
-\-> $E_i$ é o indicador de evento tal que $E_i=1$, se um evento acontecer e $Ei=0$ em caso de censura
+\-> $E_i$ é o indicador de evento tal que $E_i\ =\ 1$, se um evento acontecer e $Ei\ =\ 0$ em caso de censura
 
-\-> $T_i = min(t_i,c_i)$ é o tempo observado, com $t_i$ o tempo real do evento e $c_i$ o tempo de censura.
+\-> $T_i\ =\ min(t_i,c_i)$ é o tempo observado, com $t_i$ o tempo real do evento e $c_i$ o tempo de censura.
 
 Isso significa que para ajustar um determinado modelo, você precisará fornecer esses 3 elementos.
 
@@ -52,8 +52,10 @@ mtlr.fit(X=X_train, T=T_train, E=E_train)
 
 $T$ é uma variável aleatória positiva que representa o tempo de espera até que um evento ocorra. Sua função de densidade de probabilidade (p.d.f.) é $f(t)$ e a função de distribuição cumulativa (c.d.f.) é dada por
 
-$$F(t) \= P[T<t] = \int_{-\infty}^t f(u)du$$
+
 
 \-> $S(t,x)$**, Função de Sobrevivência**  
+
+$$S(t) \ =\ P[T\geq t] \ =\ 1 - F(t)$$
 
 \-> $h(t,x)$**, Função de Risco e** $r(x)$ **pontuação de risco**
