@@ -71,3 +71,7 @@ Assim, as funções de risco e sobrevivência estão ligadas pela seguinte fórm
 $$ S(t)\ =\ \exp \left( -\int_{0}^th(u)du \right)$$
 
 onde $H(t) \=\ \int_{0}^th(u)du$ é a função de risco acumulada.
+
+No entanto, a função de risco raramente é usada em sua forma original. Na maioria das vezes, subdividimos o eixo do tempo em $J$ partes e calculamos a pontuação de risco de uma amostra $x$, tal que:
+
+$$r(x) \ =\ \sum_{j=1}^J H(t_j, x)$$
