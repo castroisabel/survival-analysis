@@ -52,8 +52,6 @@ mtlr.fit(X=X_train, T=T_train, E=E_train)
 
 $T$ é uma variável aleatória positiva que representa o tempo de espera até que um evento ocorra. Sua função de densidade de probabilidade (p.d.f.) é $f(t)$ e a função de distribuição cumulativa (c.d.f.) é dada por
 
-
-
 \-> $S(t,x)$**, Função de Sobrevivência**  
 
 $$S(t) \ =\ P[T\geq t] \ =\ 1 - F(t)$$
