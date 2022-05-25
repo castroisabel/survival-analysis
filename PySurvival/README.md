@@ -13,11 +13,11 @@ pip install pysurvival
 A análise de sobrevivência é a a área da estatística interessada em estudar a duração entre eventos e é
 usada para analisar ou prever quando um evento provavelmente acontecerá. Originou-se da pesquisa médica, mas seu uso se expandiu muito para muitos campos diferentes. Por exemplo:
 
-\- Bancos, credores e outras instituições financeiras o usam para calcular a velocidade de pagamento de empréstimos ou quando um mutuário entrará em inadimplência
+- Bancos, credores e outras instituições financeiras o usam para calcular a velocidade de pagamento de empréstimos ou quando um mutuário entrará em inadimplência
 
-\- As empresas o usam para prever quando os funcionários decidirão sair
+- As empresas o usam para prever quando os funcionários decidirão sair
 
-\- Engenheiros/fabricantes o aplicam para prever quando uma máquina irá quebrar
+- Engenheiros/fabricantes o aplicam para prever quando uma máquina irá quebrar
 
 
 ## Censura
@@ -32,11 +32,11 @@ Pode-se ficar tentado a usar um modelo de regressão para prever quando os event
 
 Caracterizamos os dados da análise de sobrevivência com 3 elementos: $(X_i, E_i, T_i)$, $\forall_i$,
 
-\- $X_i$ é um vetor de features p-dimensional
+\-> $X_i$ é um vetor de features p-dimensional
  
-\- $E_i$ é o indicador de evento tal que $E_i=1$, se um evento acontecer e $Ei=0$ em caso de censura
+\-> $E_i$ é o indicador de evento tal que $E_i=1$, se um evento acontecer e $Ei=0$ em caso de censura
 
-\- $T_i = min(t_i,c_i)$ é o tempo observado, com $t_i$ o tempo real do evento e $c_i$ o tempo de censura.
+\-> $T_i = min(t_i,c_i)$ é o tempo observado, com $t_i$ o tempo real do evento e $c_i$ o tempo de censura.
 
 Isso significa que para ajustar um determinado modelo, você precisará fornecer esses 3 elementos.
 
@@ -48,11 +48,12 @@ mtlr.fit(X=X_train, T=T_train, E=E_train)
 
 ## A matemática da Análise de Sobrevivência
 
-\- $T$**, Tempo de Sobrevivência**  
+\-> $T$**, Tempo de Sobrevivência**  
 
 $T$ é uma variável aleatória positiva que representa o tempo de espera até que um evento ocorra. Sua função de densidade de probabilidade (p.d.f.) é $f(t)$ e a função de distribuição cumulativa (c.d.f.) é dada por
 
+$$F(t) \= P[T<t] = \int_{-\infty}^t f(u)du$$
 
-\- $S(t,x)$**, Função de Sobrevivência**  
+\-> $S(t,x)$**, Função de Sobrevivência**  
 
-\- $h(t,x)$**, Função de Risco e** $r(x)$ **pontuação de risco**
+\-> $h(t,x)$**, Função de Risco e** $r(x)$ **pontuação de risco**
